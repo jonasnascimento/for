@@ -17,26 +17,25 @@ const contacts = [
 button.addEventListener("click", search)
 function search() {
 
-    console.log(search)
 
 
 
 
-    for (let i = 0; i < contacts.length; i++) {
+    for (let letter of contacts) {
 
-        if (input.value.toLowerCase() === contacts[i].name.toLowerCase()) {
-            p.innerHTML = `Contato encontrado nome: ${contacts[i].name}  tel: ${contacts[i].number}`
+        if (input.value.toLowerCase() === letter.name.toLowerCase()) {
+            p.innerHTML = `Contato encontrado nome: ${letter.name}  tel: ${letter.number}`
 
             break
         } else {
-           p.innerHTML = "Contato não encontrado"
+            p.innerHTML = "Contato não encontrado"
         }
+
     }
 
 
+    }
 
-
-}
 
 
 
